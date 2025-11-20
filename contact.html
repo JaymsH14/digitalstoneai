@@ -6,6 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Request an automation audit or contact DigitalStone AI for custom AI agents, automations, or consulting." />
   <link rel="stylesheet" href="style.css" />
+  
+  <style>
+    /* Responsive iframe container */
+    .google-form-container {
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #111;
+      padding: 1rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    .google-form-container iframe {
+      width: 100%;
+      height: 1200px;
+      border: none;
+    }
+
+    @media (max-width: 600px) {
+      .google-form-container iframe {
+        height: 1400px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -35,35 +60,22 @@
   </section>
 
   <section class="section">
-    <div class="container cta-card" style="max-width: 720px; margin:0 auto;">
-      <form class="contact-form" action="https://formspree.io/f/xwpyygpb" method="POST">
+    <div class="container cta-card" style="max-width: 800px; margin:0 auto;">
 
-        <label>
-          Name
-          <input type="text" name="name" placeholder="Your name" required />
-        </label>
+      <!-- GOOGLE FORM EMBED -->
+      <div class="google-form-container">
+        <iframe 
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfklpsds_iaadDrRLQnJdTVDVVVmJuvQs2g-MV68Ynbs2PmCQ/viewform?embedded=true"
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0">
+        </iframe>
+      </div>
 
-        <label>
-          Email
-          <input type="email" name="email" placeholder="you@example.com" required />
-        </label>
+      <p class="form-helper" style="text-align:center; margin-top:1rem;">
+        Prefer DMs? Message me on Instagram — mention this audit and I’ll take a look.
+      </p>
 
-        <label>
-          Business Type
-          <input type="text" name="business_type" placeholder="Creator, coach, small business…" />
-        </label>
-
-        <label>
-          What do you want to automate?
-          <textarea name="message" rows="4" placeholder="Share your current setup, tools, and bottlenecks."></textarea>
-        </label>
-
-        <button type="submit" class="btn-primary btn-block">Request Automation Audit</button>
-
-        <p class="form-helper" style="text-align:center; margin-top:0.5rem;">
-          Prefer DMs? You can message on Instagram and mention this audit.
-        </p>
-      </form>
     </div>
   </section>
 
@@ -76,17 +88,21 @@
       <p>AI automation & systems consulting for real businesses and creators.</p>
     </div>
     <div class="footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
     </div>
     <div class="footer-meta">
       © <span id="year"></span> DigitalStone AI. All rights reserved.
     </div>
   </div>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </footer>
 
 </body>
 </html>
+
+
 
